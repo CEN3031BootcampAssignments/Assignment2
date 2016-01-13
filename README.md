@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Introduction to Front-end development with Angular.js
 We will continue to build upon our directory application by creating a front-end interface with Angular.js to display listings, as well as the ability to add new listings and delete old ones.
 
@@ -84,3 +85,6 @@ Take a look at the source code provided to you, and map out how the different fi
 4. Points towards Project Bidding - Style your page using CSS
 
 Note: Project Bidding Points give your group an edge over other groups for priority in choosing projects
+=======
+# CEN3031-Assignment2
+>>>>>>> bb8c587dc40b9665c566aee8e0fd64915050d8ec
