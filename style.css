@@ -1,0 +1,19 @@
+#searchBar {
+	margin: 15px 10px;
+}
+
+.tableWrapper {
+	max-height: 400px;
+	overflow: auto;
+}
+
+input{
+	width: 110px;
+	vertical-align: left;
+	border-radius: 5px;
+	border-style: groove;
+}
+
+tr#t1 {
+    border: 5px solid white;
+}
