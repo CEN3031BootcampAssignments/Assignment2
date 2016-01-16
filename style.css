@@ -5,6 +5,13 @@
 .tableWrapper {
 	max-height: 400px;
 	overflow: auto;
+	border-radius: 5px;
+	border-style: groove;
+}
+
+.jumbotron {
+	border-radius: 5px;
+	border-style: groove;
 }
 
 input{

@@ -33,14 +33,13 @@
 		  <div ng-hide="addNew">
 			<button ng-model="addNew" ng-click="addNew = !addNew">Add listing</button>
 		  </div>
-		  <div class="animate-hide" ng-show="addNew">
-			  <table>
-			    <tr id="t1"><p>Enter a new listing:</p></tr>
+		  <div class="tableWrapper" ng-show="addNew">
+			  <table class="table table-condensed">
+			    <tr id="t1"><td><h3>Enter a new listing:</h3></td></tr>
 				<tr id="t1"><td>Code: <input type="text" ng-model="newListingCode" placeholder="Code"></td></tr>
 				<tr id="t1"><td>Name: <input type="text" ng-model="newListingName" placeholder="Building name"></td></tr>
 				<tr id="t1"><td>Coordinates: <input type="text" ng-model="newListingLat" placeholder="Latitude">, <input type="text" ng-model="newListingLong" placeholder="Longitude"></td></tr>
 				<tr id="t1"><td>Address: <input type="text" ng-model="newListingAddress" placeholder="Address"></td></tr>
-			    <tr id="t1"><td></td></tr>
 				<tr id="t1"><td><button ng-click="addListing(); addNew = !addNew">Save</button></td></tr>
 			  </table>
 		  </div>
@@ -49,11 +48,14 @@
         <div class="col-md-6">
           <div class="jumbotron">
             <h2>Detailed Information</h2>
+			<div ng-show="detailedInfo == undefined">
+				<tr>Please select a listing.</tr>
+			</div>
 			<div ng-hide="detailedInfo == undefined">
-				<tr>Code: {{detailedInfo.code}}</tr></br> 
-				<tr>Name: {{detailedInfo.name}}</tr></br> 
-				<tr>Coordinates: {{detailedInfo.coordinates.latitude}}, {{detailedInfo.coordinates.longitude}}</tr></br> 
-				<tr>Address: {{detailedInfo.address}}</tr>
+				<div ng-hide="detailedInfo.code == undefined">Code: {{detailedInfo.code}}</div> 
+				<div ng-hide="detailedInfo.name == undefined">Name: {{detailedInfo.name}}</div>
+				<div ng-hide="detailedInfo.coordinates.latitude == undefined && detailedInfo.coordinates.longitude == undefined">Coordinates: {{detailedInfo.coordinates.latitude}}, {{detailedInfo.coordinates.longitude}}</div>
+				<div ng-hide="detailedInfo.address == undefined">Address: {{detailedInfo.address}}</div>
 			</div>
           </div>
         </div>
